@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+:root {
+    --font-family: "Poppins", sans-serif;
+    --background: #e3f2fd;
+    --black: #141414;
+    --green: #50c878;
+    --black-linear-gradient: linear-gradient(#333, black);
+    --active-black-linear-gradient: linear-gradient(to bottom, black, #434343);
+    --active-black-box-shadow: -5px 5px 10px rgba(255, 255, 255, 0.1);
+    --white-linear-gradient: linear-gradient(#fff 96%, #eee 4%);
+    --active-white-linear-gradient: linear-gradient(
+        to bottom,
+        #fff 0%,
+        #eee 100%
+    );
+    --active-white-box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.2);
+}
