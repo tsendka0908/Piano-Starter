@@ -16,3 +16,148 @@
     );
     --active-white-box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.2);
 }
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    background-color: var(--background);
+}
+
+#container {
+    height: 100vh;
+    width: 100vh;
+    display: flex;
+}
+
+.piano {
+    background-color: var(--black);
+    padding: 35px 40px;
+    border-radius: 20px;
+    align-self: center;
+}
+
+header {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header div span {
+    font-size: 1.2rem;
+}
+
+header h2 {
+    font-size: 1.6rem;
+}
+
+.piano-keys {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-top: 40px;
+    list-style: none;
+}
+
+.key {
+    color: gray;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+.piano-keys .key.hide div {
+    display: none;
+}
+
+.piano-keys .key.hide span {
+    display: none;
+}
+
+.white {
+    background: var(--white-linear-gradient);
+    width: 70px;
+    height: 230px;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+
+.black {
+    background: var(--black-linear-gradient);
+    width: 44px;
+    height: 140px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin: 0 -22px;
+    z-index: 2;
+}
+
+.key div {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 35px;
+    color: crimson;
+}
+
+.key span {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 7px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.white.active {
+    background: var(--active-white-linear-gradient);
+    box-shadow: var(--active-white-box-shadow);
+}
+
+.black.active {
+    background: var(--active-black-linear-gradient);
+    box-shadow: var(--active-black-box-shadow);
+}
+
+.volume-slider input {
+    accent-color: white;
+}
+
+.keys-checkbox input {
+    appearance: none;
+    background-color: gray;
+    width: 60px;
+    height: 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s ease background-color;
+}
+
+.keys-checkbox input:checked {
+    background-color: var(--green);
+}
+
+.keys-checkbox input::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 30px;
+    background-color: white;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.3s ease left;
+}
+.keys-checkbox input:checked::before {
+    left: 35px;
+}
